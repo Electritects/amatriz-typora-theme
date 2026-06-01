@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400" role="img" aria-labelledby="title desc">
+  <title id="title">AMatriz Typora Theme thumbnail</title>
+  <desc id="desc">Gallery thumbnail for AMatriz, showing a dark green Typora editor and a white PDF export page.</desc>
+  <defs>
+    <linearGradient id="dark-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030803"/>
+      <stop offset="0.55" stop-color="#061006"/>
+      <stop offset="1" stop-color="#001a00"/>
+    </linearGradient>
+    <linearGradient id="white-page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f4f7f5"/>
+    </linearGradient>
+    <pattern id="scanlines" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M0 5.5H6" stroke="#00ff41" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#00ff41" stroke-opacity="0.09" stroke-width="1"/>
+    </pattern>
+    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="500" height="400" fill="#030803"/>
+  <rect width="500" height="400" fill="url(#dark-bg)"/>
+  <rect width="500" height="400" fill="url(#grid)"/>
+  <rect width="500" height="400" fill="url(#scanlines)"/>
+
+  <g font-family="Consolas, 'JetBrains Mono', 'Courier New', monospace">
+    <text x="28" y="62" font-size="48" font-weight="700" fill="#00ff41" filter="url(#soft-glow)">AMatriz</text>
+    <text x="31" y="94" font-size="18" font-weight="600" fill="#66ff99">Typora Theme</text>
+    <text x="31" y="121" font-size="13" fill="#00b32d">dark editor + print-ready PDF</text>
+  </g>
+
+  <g transform="translate(30 156)" font-family="Consolas, 'JetBrains Mono', 'Courier New', monospace">
+    <rect width="198" height="154" rx="8" fill="#000000" fill-opacity="0.48" stroke="#00e63a" stroke-opacity="0.55"/>
+    <text x="16" y="30" font-size="15" fill="#00ff41"># AMatriz</text>
+    <text x="16" y="57" font-size="12" fill="#33ff66">body { color: #00e63a; }</text>
+    <text x="16" y="82" font-size="12" fill="#00b32d">code { background: #001a00; }</text>
+    <path d="M16 104H178M16 124H152" stroke="#00ff41" stroke-opacity="0.24" stroke-width="2"/>
+    <circle cx="18" cy="137" r="3" fill="#00e63a"/>
+    <circle cx="34" cy="137" r="3" fill="#00b32d"/>
+    <circle cx="50" cy="137" r="3" fill="#004d00"/>
+  </g>
+
+  <g transform="translate(266 78)">
+    <rect x="0" y="0" width="194" height="274" rx="7" fill="#dbe1db" opacity="0.28"/>
+    <rect x="-10" y="11" width="194" height="274" rx="7" fill="url(#white-page)" stroke="#e3e7e3"/>
+    <g font-family="Consolas, 'JetBrains Mono', 'Courier New', monospace">
+      <text x="10" y="40" font-size="22" font-weight="700" fill="#000000">White PDF</text>
+      <path d="M10 55H164" stroke="#555555" stroke-width="1"/>
+      <text x="10" y="83" font-size="10" fill="#000000">Black default text</text>
+      <text x="10" y="105" font-size="10" fill="#0645ad">Blue links</text>
+      <rect x="10" y="123" width="154" height="28" rx="3" fill="#f2f2f2" stroke="#bfbfbf"/>
+      <text x="18" y="141" font-size="9" fill="#000000">inline code and fences</text>
+      <path d="M10 176H164M10 198H164M10 220H132" stroke="#888888" stroke-width="1"/>
+      <text x="10" y="251" font-size="10" fill="#000000">Print white variant</text>
+    </g>
+  </g>
+
+  <g font-family="Consolas, 'JetBrains Mono', 'Courier New', monospace" fill="#00ff41" opacity="0.38">
+    <text x="332" y="35" font-size="10">01000001</text>
+    <text x="418" y="57" font-size="10">PDF</text>
+    <text x="354" y="372" font-size="10">01110100</text>
+    <text x="26" y="365" font-size="10">#write { max-width: none; }</text>
+  </g>
+
+  <rect x="12" y="12" width="476" height="376" rx="14" fill="none" stroke="#00ff41" stroke-opacity="0.24"/>
+</svg>

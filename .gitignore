@@ -1,0 +1,14 @@
+# Operating system noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local scratch and generated validation renders
+sandbox/
+docs/pdf-renders/
+
+# Temporary editor/build files
+*.bak
+*.tmp
+*.swp
+~$*
