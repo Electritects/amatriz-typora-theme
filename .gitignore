@@ -3,9 +3,9 @@
 Thumbs.db
 desktop.ini
 
-# Local scratch and generated validation renders
+# Local scratch and AI-generated validation artifacts
 sandbox/
-docs/pdf-renders/
+aitools/
 
 # Temporary editor/build files
 *.bak

@@ -30,11 +30,13 @@ Typora themes cannot add export-dialog toggles, so users choose the desired PDF 
 - Dark green-black editor background.
 - Neon green body text with softer green secondary text.
 - Styled headings, links, lists, task lists, blockquotes, tables, inline code, and fenced code blocks.
+- Neon green editor cursor/caret styling, including inside tables and fenced code editing.
 - Dark sidebar, Files panel, and Outline panel styling.
 - Preferences and Export dialog styling coverage for common Typora UI containers.
 - Dark PDF export support from `amatriz.css`.
 - White PDF export support from `amatriz-print-white.css`.
 - Print rules for A4-friendly margins, table borders, repeating table headers, code block panels, and Mermaid diagram sizing.
+- In-document `[TOC]` block styling with a visible contour; page breaks after the TOC remain document-authored, not theme-forced.
 
 ## Installation
 
@@ -61,6 +63,7 @@ The license applies to the AMatriz theme source files and project assets in this
 - Preserved inline HTML colors.
 - Bordered code blocks and tables.
 - Mermaid diagrams kept inside the printable page.
+- Rendered math and Mermaid output preserved in export.
 
 `amatriz-print-white.css` exports a printer-friendly white PDF:
 
@@ -70,6 +73,8 @@ The license applies to the AMatriz theme source files and project assets in this
 - Yellow highlight support.
 - Light code panels with black text.
 - Gray table and blockquote borders.
+- Dashed gray in-document TOC contour.
+- Rendered math and Mermaid output preserved in export.
 - Preserved authored inline HTML colors, such as `<span style="color: red;">red</span>`.
 
 Both themes now use real `@page` margins instead of fake body padding, and table header rows are configured to repeat when a table spans pages.
@@ -82,6 +87,7 @@ The public theme CSS does not hard-code page breaks for the validation document.
 - `docs/Typora Test File v1.0.0 - PDF using Amatriz print white theme.pdf` is the white-export validation artifact.
 - `docs/Typora Test File v1.0.0 - PDF using Amatriz theme.pdf` is the dark-export validation artifact.
 - `docs/AMatriz Specifications v1.0.0.md` contains the detailed technical specification.
+- `docs/assets/` contains documentation-owned images, such as the README banner.
 - `artwork/` contains gallery-ready artwork, including `amatriz.png` at 250x200 and `amatriz-500x400.png` at 500x400.
 
 ## Recommended Test Flow
@@ -96,7 +102,10 @@ The public theme CSS does not hard-code page breaks for the validation document.
    - Yellow highlight remains visible.
    - Code blocks are single bordered panels.
    - Tables show full outside borders.
+   - The `[TOC]` block renders with its contour when present.
+   - Math renders as equations rather than raw LaTeX source.
    - Mermaid diagram is not clipped.
+   - Mermaid renders as a diagram rather than raw source.
    - No visible CSS or HTML helper text leaks into the PDF.
 
 Repeat the flow with `AMatriz` to validate the dark PDF behavior.
@@ -149,6 +158,9 @@ Official Typora submission requirements are staged under `typora-theme-gallery-s
 - Restored visible yellow highlight behavior.
 - Fixed fenced code blocks so the border wraps the block rather than every line.
 - Improved table borders and configured repeating table headers.
+- Tightened list spacing and editor cursor visibility, including table and code-block editing contexts.
+- Preserved the visible in-document TOC contour while keeping TOC page breaks under document control.
+- Restored rendered math and Mermaid behavior in white-print export.
 - Constrained Mermaid diagrams so they do not clip at the bottom of the page.
 - Reworked `docs/Typora Test File v1.0.0.md` into an A4-oriented validation/template document with print-aware pagination.
 - Moved validation-document page breaks out of theme CSS so the public theme remains document-independent.

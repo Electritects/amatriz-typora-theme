@@ -115,8 +115,11 @@
 - `#write`: content width and margins.
 - `h1` through `h6`: typography and separators.
 - `a`, `strong`, `em`, `mark`, `kbd`: inline semantic styling.
+- `.md-cursor`, `.CodeMirror-cursor`, `.cm-cursor`, and `caret-color`: neon green editor cursor/caret visibility, including table cells and fenced code editing.
 - `code`, `pre.md-fences`: inline and fenced code styling.
 - `table`, `thead`, `tbody`, `tr`, `th`, `td`: table grid visibility and print behavior.
+- `.md-toc`: in-document table of contents styling with visible contour.
+- `.md-math-block`, `.md-mathjax-preview`, and MathJax output: equation editing and export compatibility.
 - `.md-diagram-panel`, `svg.mermaid-svg`: Mermaid sizing and print containment.
 
 #### Sidebar and Outline Surface
@@ -146,6 +149,7 @@
 - Single bordered code block panels.
 - Visible table borders.
 - Mermaid diagrams constrained to the printable page.
+- Rendered math and Mermaid output preserved in export.
 
 ### 4.2 White Export
 
@@ -157,6 +161,8 @@
 - Yellow highlights preserved.
 - Light gray code panels.
 - Gray blockquote and table borders.
+- Dashed gray in-document TOC contour when `[TOC]` is used.
+- Rendered math and Mermaid output preserved in export.
 - Preserved authored inline HTML colors.
 
 ### 4.3 Print Layout Rules
@@ -168,6 +174,7 @@
 - Code fences, blockquotes, images, and Mermaid diagrams avoid bad page splits where possible.
 - Mermaid SVGs are constrained with a maximum print height to avoid bottom clipping.
 - Compact print table handling is opt-in through table classes such as `amatriz-technical-table`, `amatriz-chemistry-table`, `amatriz-unicode-table`, and `periodic-mini`.
+- The theme does not force a page break after `[TOC]`; documents own that pagination decision.
 
 ## 5. User-Facing Behavior Notes
 
@@ -218,7 +225,10 @@ Installed validation copies:
   - Yellow highlight remains visible in white-print output.
   - Fenced code blocks print as one panel, not as one box per line.
   - Table outside borders remain visible.
+  - `[TOC]` renders with a visible contour when present.
+  - Math renders as equations rather than raw LaTeX source.
   - Mermaid diagrams do not clip.
+  - Mermaid renders as a diagram rather than raw source.
 - Portability:
   - No dependency on other themes' sub-files or external resources.
 
@@ -251,6 +261,9 @@ Installed validation copies:
 - Implemented dark PDF export in installed `amatriz.css`.
 - Implemented white PDF export in installed `amatriz-print-white.css`.
 - Reworked the PDF export test document into an A4-oriented validation/template file.
+- Added explicit neon green cursor/caret coverage for normal editing, table editing, and fenced code editing.
+- Preserved the in-document TOC contour while keeping TOC page-break control in Markdown.
+- Restored rendered math and Mermaid behavior in white-print export.
 - Added gallery artwork under `artwork/`.
 - Copied final installed CSS into `coding/` for the v1.0.0 release package.
 - Prepared Typora Theme Gallery submission staging files under `typora-theme-gallery-submission/`.
@@ -268,6 +281,9 @@ Installed validation copies:
 - Restored yellow highlight visibility.
 - Fixed fenced code print styling to avoid per-line boxes.
 - Improved table borders and table header repeat behavior.
+- Tightened list spacing and improved cursor/caret visibility in editor, table, and code-block contexts.
+- Preserved the visible `[TOC]` contour while leaving TOC page breaks to the document.
+- Restored rendered math and Mermaid behavior in white-print export.
 - Constrained Mermaid diagrams to prevent bottom clipping.
 - Reworked the PDF test file as an A4-friendly validation/template document.
 - Added publishing artwork under `artwork/`.

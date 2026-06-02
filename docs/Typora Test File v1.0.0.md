@@ -8,7 +8,7 @@ This dossier is a controlled test document for the AMatriz Typora theme family. 
 
 [TOC]
 
-
+<div style="break-before: page; page-break-before: always;"></div>
 ## 1. Purpose and Scope
 
 This document validates AMatriz v1.0.0, including the `amatriz.css` and `amatriz-print-white.css` theme variants. It is structured as an A4 PDF export template with print-aware pagination rules, allowing tables, diagrams, code blocks, equations, and reference material to be inspected under repeatable conditions.
@@ -37,10 +37,7 @@ Keyboard-style HTML check: <kbd>Ctrl</kbd> + <kbd>S</kbd>
 
 Editorial spacing check: this paragraph extends the prose sample with ordinary explanatory copy rather than artificial filler. It checks whether adjacent inline elements, punctuation, and sentence rhythm remain comfortable when the paragraph wraps across several lines in the exported PDF.
 
-Scholarly apparatus check: short terms such as *rendering context*, **print fidelity**, and `theme override` should remain visually distinct without becoming loud. The point is to preserve typographic hierarchy while keeping body text quiet enough for long technical notes.
-
-
-<div style="break-before: page; page-break-before: always;"></div>
+Scholarly apparatus check: short terms such as *rendering context*, **print fidelity**, and `theme override` should remain visually distinct without becoming loud.
 
 ## 3. Heading Hierarchy and Section Rhythm
 
@@ -72,14 +69,9 @@ Color preservation matters because many technical notes use inline color to mark
 
 Contrast check: <span style="color: firebrick;">firebrick warning text</span>, <span style="color: seagreen;">seagreen pass text</span>, <span style="color: dodgerblue;">dodger blue reference text</span>, and <span style="color: darkorange;">dark orange caution text</span> remain authored colors in both exports. Unstyled words around them should follow the selected theme.
 
-Mixed formatting check: <span style="color: purple;"><strong>bold purple annotation</strong></span>, <span style="color: teal;"><em>italic teal annotation</em></span>, and <span style="color: #444444; background: #fffbcc;">muted text on highlight</span> test nested inline emphasis without requiring raw CSS in the Markdown file.
-
-
-<div style="break-before: page; page-break-before: always;"></div>
-
 ## 5. Lists
 
-Lists verify indentation, wrapping, task boxes, and default text color. In white-print mode, list text is black unless an item contains explicit inline color.
+Lists verify indentation, wrapping, task boxes, and default text color.
 
 ### 5.1 Unordered List
 
@@ -88,7 +80,7 @@ Lists verify indentation, wrapping, task boxes, and default text color. In white
     - Nested item A.1.a
   - Nested item A.2 with <span style="color: crimson;">crimson inline HTML</span>
 - Top-level item B
-- Top-level item C with `inline code` and **bold text**
+- Top-level item C with `inline code`.
 
 ### 5.2 Ordered List
 
@@ -102,7 +94,7 @@ Lists verify indentation, wrapping, task boxes, and default text color. In white
 
 - [x] Completed task shows a clear checked state.
 - [ ] Pending task shows an empty checkbox.
-- [ ] Long pending task text wraps cleanly without colliding with the checkbox or adjacent lines.
+- [ ] Pending task wraps cleanly.
 
 ## 6. Blockquotes
 
@@ -112,14 +104,12 @@ Blockquotes keep their left border. In white-print mode, the quote text is black
 >
 > > Nested quote level 2 remains readable.
 > >
-> > > Nested quote level 3 stays distinct from the page background.
+> > > Nested quote level 3 stays distinct.
 
 
 <div style="break-before: page; page-break-before: always;"></div>
 
 ## 7. Code Blocks
-
-Code blocks print as one bordered block, not as a separate bordered box around every line.
 
 ### 7.1 Plain Text Fence
 
@@ -139,7 +129,6 @@ border: visible gray
   --amatriz-print-bg: #ffffff;
   --amatriz-print-fg: #000000;
 }
-
 @media print {
   body { background: #ffffff; color: #000000; }
 }
@@ -180,7 +169,7 @@ Tables verify that headers, cell backgrounds, borders, wrapped content, and page
 
 ### 8.1 Table Header Repeat Stress Test
 
-This table deliberately extends past one page. The theme repeats the header row on continuation pages and keeps the outside border visible.
+This table deliberately extends past one page. The theme repeats the header row on continuation pages.
 
 | Area | What to Check | Expected `amatriz-print-white.css` Result |
 | --- | --- | --- |
@@ -231,14 +220,10 @@ This table deliberately extends past one page. The theme repeats the header row 
 | Firebrick | <span style="color: firebrick;">sample firebrick text</span> | Firebrick text |
 | Black default | normal Markdown text | Black text in print-white output |
 
-Text colors can be defined with named colors such as `skyblue`, hexadecimal values such as `#87ceeb`, RGB values such as `rgb(135, 206, 235)`, or HSL values such as `hsl(197, 71%, 73%)`. The print-white theme preserves authored inline color while converting unstyled Markdown text to black.
-
+Text colors can be defined with named colors such as `skyblue`, hexadecimal values such as `#87ceeb`, RGB values such as `rgb(135, 206, 235)`, or HSL values such as `hsl(197, 71%, 73%)`.
 
 <div style="break-before: page; page-break-before: always;"></div>
-
 ## 9. Math
-
-Math checks that Typora/MathJax output remains visible after the print overrides, including compact reference equations that often appear in technical notes.
 
 ### 9.1 Symbols and Integrals
 
@@ -305,18 +290,8 @@ i\hbar\frac{\partial}{\partial t}\Psi&=\hat{H}\Psi
 \end{aligned}
 $$
 
-$$
-\begin{array}{c}
-U\\
-\hline
-R\mid I\\[0.75em]
-U = R I \qquad I = \frac{U}{R} \qquad R = \frac{U}{I}
-\end{array}
-$$
-
 
 <div style="break-before: page; page-break-before: always;"></div>
-
 ## 10. Units, Metrics, and Conversions
 
 This section checks dense technical reference text and tables using metric, US customary, mass, weight, and force values.
@@ -362,11 +337,9 @@ This section checks dense technical reference text and tables using metric, US c
 </tbody>
 </table>
 
-Mass is a quantity of matter, while weight is a force caused by gravity. A 10 kg mass weighs about 98.1 N on Earth using F = ma with a = 9.81 m/s<sup>2</sup>. The theme keeps units, symbols, mathematical notation, and table borders readable on both dark and white PDF exports.
-
+Mass is matter quantity; weight is force caused by gravity. A 10 kg mass weighs about 98.1 N on Earth using F = ma with a = 9.81 m/s<sup>2</sup>.
 
 <div style="break-before: page; page-break-before: always;"></div>
-
 ## 11. Chemistry
 
 Chemistry checks subscripts, superscripts, reaction arrows, compact tables, and simple structural notation.
@@ -419,9 +392,7 @@ CH<sub>4</sub> + 2O<sub>2</sub> -> CO<sub>2</sub> + 2H<sub>2</sub>O
 Ca<sup>2+</sup> + CO<sub>3</sub><sup>2-</sup> -> CaCO<sub>3</sub>  
 Balancing exercise: Fe + O<sub>2</sub> -> Fe<sub>2</sub>O<sub>3</sub> becomes 4Fe + 3O<sub>2</sub> -> 2Fe<sub>2</sub>O<sub>3</sub>.
 
-
 <div style="break-before: page; page-break-before: always;"></div>
-
 ## 12. Mermaid Diagram
 
 The Mermaid block checks whether rendered diagrams stay centered, readable, and inside the printable area.
@@ -435,16 +406,14 @@ flowchart TD
     D -->|No| F[Review print CSS]
 ```
 
-
 <div style="break-before: page; page-break-before: always;"></div>
-
 ## 13. Long Lists and Page Break Stress
 
 This section checks ordinary long-form document behavior without letting the stress content damage the published PDF layout.
 
 ### 13.1 Long Paragraphs
 
-AMatriz is intended for engineering notes, build logs, setup procedures, API references, and handoff documents. These documents often contain dense text with many inline code spans such as `npm install`, `git status`, `@media print`, and `print-color-adjust: exact`. In v1.0.0, the original AMatriz theme preserves the dark PDF output, while `amatriz-print-white.css` gives users a printer-friendly white output without changing the dark editor experience.
+AMatriz is intended for engineering notes, build logs, setup procedures, API references, and handoff documents. These documents often contain dense text with inline code spans such as `npm install`, `git status`, `@media print`, and `print-color-adjust: exact`.
 
 The print-white variant avoids overly narrow content, clipped right edges, washed-out text, and forced dark backgrounds. This paragraph prints as normal black text, while this inline color sample remains <span style="color: firebrick;">firebrick</span>.
 
@@ -453,14 +422,8 @@ The print-white variant avoids overly narrow content, clipped right edges, washe
 - Check the first page background.
 - Check the TOC links and indentation.
 - Check whether H1 through H6 headings are visually distinct.
-- Check whether inline code remains readable.
-- Check whether fenced code blocks keep their panel and border.
-- Check whether table borders are visible.
-- Check whether blockquote borders are visible.
-- Check whether task checkboxes are visible.
-- Check whether math renders without color clashes.
-- Check whether Mermaid output is readable.
-- Check whether inline HTML colors survive PDF export.
+- Check inline code, code blocks, tables, and blockquotes.
+- Check task boxes, math, Mermaid, and inline HTML colors.
 
 ### 13.3 Numbered List
 
@@ -491,6 +454,7 @@ iii. Roman item three.
 - [x] TOC is readable.
 - [x] No major content is clipped.
 - [x] No heading is stranded at the bottom of a page.
+- [ ] Invent time travel.
 
 ### 13.6 Footnotes
 
@@ -504,7 +468,6 @@ This sentence includes a footnote for export testing.[^amatriz-print-white] This
 
 
 <div style="break-before: page; page-break-before: always;"></div>
-
 ## 14. Unicode
 
 Unicode checks whether multilingual scripts remain visible in exported PDFs. The table below is a rendering sample for "I love you" across different scripts and writing systems.
@@ -544,11 +507,11 @@ Unicode checks whether multilingual scripts remain visible in exported PDFs. The
 
 Accent samples: &uuml; &Uuml;, &ouml; &Ouml;, &auml; &Auml;, &eacute; &egrave; &ecirc; &euml;, &agrave; &acirc; &aelig; &ccedil;, &ntilde; &Ntilde;, &oslash; &Oslash;, &aring; &Aring;.
 
-Compact verb sample:
+Compact verb sample, 33% / 67% column width:
 
 <table class="amatriz-unicode-table">
 <thead>
-<tr><th>Language</th><th>Verb "to be" present sample</th></tr>
+<tr><th style="width: 33%;">Language</th><th style="width: 67%;"">Verb "to be" present sample</th></tr>
 </thead>
 <tbody>
 <tr><td>English</td><td>am; are; is; are</td></tr>
@@ -559,6 +522,7 @@ Compact verb sample:
 <tr><td>Italian</td><td>sono; sei; &egrave;; siamo; siete; sono</td></tr>
 </tbody>
 </table>
+
 
 
 <div style="break-before: page; page-break-before: always;"></div>
@@ -598,23 +562,9 @@ The validation strategy implemented throughout this document follows several qua
 
 No single export test can guarantee rendering consistency across all operating systems, browsers, PDF engines, fonts, and printer drivers. Consequently, exported artifacts should be evaluated on representative deployment environments prior to formal publication.
 
-### 15.5 Recommendations for Future Development
-
-Future versions may consider:
-
-- Automated PDF regression testing.
-- Accessibility compliance measurement.
-- Color-blindness simulation workflows.
-- Automated typography scoring.
-- Citation and bibliography support.
-- Academic publishing templates.
-- ISO-style technical documentation templates.
-
 
 ## 16. Conclusion
 
-The AMatriz validation document demonstrates a comprehensive framework for evaluating Markdown-to-PDF publication workflows. Through structured testing of typography, tables, mathematics, diagrams, code blocks, multilingual content, and print-specific styling, the document provides a reproducible benchmark suitable for technical documentation environments, engineering teams, software projects, and research-oriented publishing workflows.
-
-The broader significance extends beyond theme validation. The document serves as an example of how lightweight markup systems can be used to create maintainable, version-controlled, and publication-ready technical artifacts while preserving readability across digital and printed media.
+The AMatriz validation document demonstrates a comprehensive framework for evaluating Markdown-to-PDF publication workflows. Through structured testing of typography, tables, mathematics, diagrams, code blocks, multilingual content, and print-specific styling, the document provides a reproducible benchmark.
 
 Copyright (c) 2026 Electritects Pty Ltd.

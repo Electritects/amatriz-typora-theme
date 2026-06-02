@@ -63,7 +63,7 @@ html, body {
     background: var(--bg-color);
     color: var(--text-color);
     font-family: "JetBrains Mono", Consolas, monospace;
-    line-height: 1.65;
+    line-height: 1.55;
 }
 
 #write {
@@ -149,6 +149,20 @@ em {
 
 ul, ol {
     padding-left: 1.5em;
+    margin-top: 0.35em;
+    margin-bottom: 0.65em;
+}
+
+#write li {
+    margin-top: 0.12em;
+    margin-bottom: 0.12em;
+    line-height: 1.45;
+}
+
+#write li > ul,
+#write li > ol {
+    margin-top: 0.18em;
+    margin-bottom: 0.18em;
 }
 
 blockquote {
@@ -297,6 +311,32 @@ th, td {
 }
 
 .md-cursor {
+    animation: amatriz-blink 1.2s infinite;
+}
+
+#write,
+#write *,
+.CodeMirror,
+.CodeMirror *,
+.md-fences,
+.md-fences *,
+table,
+table * {
+    caret-color: #00ff41 !important;
+}
+
+.md-cursor,
+.CodeMirror-cursor,
+.cm-cursor,
+.md-fences .CodeMirror-cursor,
+pre .CodeMirror-cursor,
+td .md-cursor,
+th .md-cursor {
+    width: 2px !important;
+    min-width: 2px !important;
+    border-left: 2px solid #00ff41 !important;
+    background-color: #00ff41 !important;
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.85) !important;
     animation: amatriz-blink 1.2s infinite;
 }
 
@@ -959,13 +999,22 @@ header {
     }
 
     p,
-    li,
-    ul,
-    ol {
-        break-inside: avoid-page;
-        page-break-inside: avoid;
+    li {
         orphans: 3;
         widows: 3;
+    }
+
+    ul,
+    ol {
+        margin-top: 0.28em !important;
+        margin-bottom: 0.5em !important;
+        padding-left: 1.35em !important;
+    }
+
+    li {
+        margin-top: 0.08em !important;
+        margin-bottom: 0.08em !important;
+        line-height: 1.35 !important;
     }
 
     img,
