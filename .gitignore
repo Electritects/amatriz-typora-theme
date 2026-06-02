@@ -6,6 +6,8 @@ desktop.ini
 # Local scratch and AI-generated validation artifacts
 sandbox/
 aitools/
+ai_handover.json
+docs/AMatriz Specifications v1.0.0.md
 
 # Temporary editor/build files
 *.bak
