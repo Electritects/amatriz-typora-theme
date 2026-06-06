@@ -1,13 +1,41 @@
-# Operating system noise
-.DS_Store
+# AI Handover Telemetry
+ai_handover.json
+
+# Sandbox - User only, never touched by AI
+sandbox/
+
+# Artwork assets
+artwork/
+
+# AI Tools and review documents
+ai_tools/
+aitools/
+
+# Specifications (internal, not for GitHub)
+docs/specs/
+docs/AMatriz Specifications v1.0.0.md
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Build output
+dist/
+build/
+
+# OS files
 Thumbs.db
+.DS_Store
 desktop.ini
 
-# Local scratch and AI-generated validation artifacts
-sandbox/
-aitools/
-ai_handover.json
-docs/AMatriz Specifications v1.0.0.md
+# Logs
+*.log
+
+# IDE
+.vs/
+.vscode/
+*.suo
+*.user
 
 # Temporary editor/build files
 *.bak
