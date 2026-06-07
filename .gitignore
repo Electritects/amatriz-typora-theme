@@ -43,3 +43,7 @@ desktop.ini
 *.swp
 ~$*
 .env
+bin/
+obj/
+*.exe
+*.dll
