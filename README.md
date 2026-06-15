@@ -6,7 +6,7 @@ AMatriz is a standalone Typora theme with a Matrix-inspired green-on-black visua
 
 ## Current Version
 
-- Version: `v1.0.0`
+- Version: `v1.0.1`
 - Status: Complete and ready for Typora Theme Gallery submission
 - Packaged theme CSS:
   - `coding/amatriz.css`
@@ -14,7 +14,7 @@ AMatriz is a standalone Typora theme with a Matrix-inspired green-on-black visua
 - Installed validation copies:
   - `%APPDATA%\Typora\themes\amatriz.css`
   - `%APPDATA%\Typora\themes\amatriz-print-white.css`
-- `coding/` status: synchronized from the accepted Typora theme-folder copies for the v1.0.0 release package.
+- `coding/` status: synchronized from the accepted Typora theme-folder copies for the v1.0.1 release package.
 
 ## Theme Variants
 
@@ -84,9 +84,9 @@ The public theme CSS does not hard-code page breaks for the validation document.
 ## Validation Files
 
 - `docs/Typora Test File v1.0.0.md` is the main A4 PDF validation/template file.
-- `docs/Typora Test File v1.0.0 - PDF using Amatriz print white theme.pdf` is the white-export validation artifact.
-- `docs/Typora Test File v1.0.0 - PDF using Amatriz theme.pdf` is the dark-export validation artifact.
-- `docs/AMatriz Specifications v1.0.0.md` contains the detailed technical specification.
+- `docs/Typora Test File v1.0.0 - PDF using Amatriz white print v1.0.1.pdf` is the white-export validation artifact.
+- `docs/Typora Test File v1.0.0 - PDF using Amatriz v1.0.1.pdf` is the dark-export validation artifact.
+- `docs/specs/AMatriz Specifications v1.0.1.md` contains the detailed technical specification.
 - `docs/assets/` contains documentation-owned images, such as the README banner.
 - `artwork/` contains gallery-ready artwork, including `amatriz.png` at 250x200 and `amatriz-500x400.png` at 500x400.
 
@@ -146,6 +146,23 @@ Official Typora submission requirements are staged under `typora-theme-gallery-s
 - Publish this project repository or release ZIP, then replace the placeholder `homepage` and `download` URLs in the staged post before opening the pull request.
 
 ## Changelog
+
+### v1.0.1
+
+- Defined a complete design system variable set at `:root`.
+- Implemented an explicit heading scale for `h1`–`h6`.
+- Adjusted default body line height to `1.6` for improved readability.
+- Scoped scanline overlay to `@media screen` to isolate it from exports.
+- Enhanced table header and row striping contrast (both in screen view and print mode).
+- Added subtle box-shadow glow and vertical margins to fenced code blocks (`pre.md-fences`).
+- Styled inline `code` blocks with borders and a background color using theme variables.
+- Added hierarchical border/opacity rules for nested blockquotes.
+- Increased link underline thickness to `2px`.
+- Optimized the maximum width of the editor container `#write` to `980px`.
+- Standardized print-break directives in `@media print` with modern properties.
+- Softened the caret/cursor glow size.
+- Reduced the sidebar min-width to `240px` to save screen space.
+- Added a robust font stack fallback list on `html, body`.
 
 ### v1.0.0
 

@@ -1,5 +1,5 @@
 /* =========================================================
-   AMATRIZ THEME - v1.0.0
+   AMATRIZ THEME - v1.0.1
    SPDX-License-Identifier: MIT
    Copyright (c) 2026 Electritects Pty Ltd
    Clean Matrix-inspired engineering theme
@@ -16,31 +16,31 @@
     --side-bg: #050905;
 
     --text-color: #00e63a;
-    --text-soft: #00b32d;
-    --text-dim:  #004d00;
+    --text-soft: #00cc44;
+    --text-dim: #007a1a;
     --select-text-bg-color: #003b00;
     --select-text-font-color: #00ff41;
     --primary-color: #00e63a;
-    --primary-btn-border-color: #00b32d;
+    --primary-btn-border-color: #00cc44;
     --primary-btn-text-color: #030803;
-    --active-file-bg-color: #002200;
+    --active-file-bg-color: #0b2e0b;
     --active-file-text-color: #00ff41;
     --active-file-border-color: #00e63a;
-    --item-hover-bg-color: #001a00;
+    --item-hover-bg-color: #082208;
     --item-hover-text-color: #00ff41;
     --control-text-color: #00e63a;
     --control-text-hover-color: #00ff41;
-    --window-border: #003b00;
+    --window-border: #0f2a0f;
 
-    --border-color: #003b00;
+    --border-color: #0f2a0f;
 
-    --code-bg: #001a00;
-    --panel-bg: #000000;
+    --code-bg: #061206;
+    --panel-bg: #040a04;
 
-    --hover-bg: #001a00;
-    --active-bg: #002200;
+    --hover-bg: #082208;
+    --active-bg: #0b2e0b;
 
-    --link-color: #33ff66;
+    --link-color: #87ceeb;
 }
 
 html {
@@ -62,13 +62,13 @@ body,
 html, body {
     background: var(--bg-color);
     color: var(--text-color);
-    font-family: "JetBrains Mono", Consolas, monospace;
-    line-height: 1.55;
+    font-family: "JetBrains Mono", "Consolas", "Menlo", "Courier New", monospace;
+    line-height: 1.6;
 }
 
 #write {
     width: calc(100% - 80px);
-    max-width: 1280px;
+    max-width: 980px;
     min-width: 0;
     margin-left: 40px;
     margin-right: auto;
@@ -91,13 +91,15 @@ html, body {
 }
 
 /* subtle scanline texture */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: linear-gradient(rgba(0,255,65,0.020) 1px, transparent 1px);
-    background-size: 100% 4px;
-    pointer-events: none;
+@media screen {
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: linear-gradient(rgba(0,255,65,0.020) 1px, transparent 1px);
+        background-size: 100% 4px;
+        pointer-events: none;
+    }
 }
 
 /* =========================
@@ -120,7 +122,13 @@ h1 {
 h2 {
     border-bottom: 1px solid var(--text-dim);
     padding-bottom: 4px;
+    font-size: 1.6rem;
 }
+
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.15rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.9rem; opacity: 0.85; }
 
 /* =========================
    TEXT / LINKS
@@ -129,6 +137,7 @@ h2 {
 a {
     color: var(--link-color);
     text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 a:hover {
@@ -171,6 +180,16 @@ blockquote {
     color: var(--text-soft);
 }
 
+blockquote blockquote {
+    border-left: 2px solid var(--text-dim);
+    opacity: 0.9;
+}
+
+blockquote blockquote blockquote {
+    border-left: 2px dashed var(--text-dim);
+    opacity: 0.8;
+}
+
 hr {
     border: none;
     height: 1px;
@@ -211,6 +230,7 @@ pre.md-meta-block *,
 
 code {
     background: var(--code-bg);
+    border: 1px solid var(--border-color);
     color: var(--text-color);
     padding: 2px 6px;
     border-radius: 3px;
@@ -223,6 +243,10 @@ pre.md-fences {
     overflow-x: auto;
     white-space: pre-wrap;
     word-break: break-word;
+    margin: 1em 0;
+    box-shadow: 0 0 4px rgba(0, 255, 65, 0.15);
+    break-inside: auto;
+    page-break-inside: auto;
 }
 
 pre code,
@@ -282,11 +306,12 @@ th, td {
 }
 
 #write th {
-    background-color: var(--code-bg) !important;
+    background-color: #082208 !important;
+    font-weight: 600;
 }
 
 #write tr:nth-child(even) td {
-    background-color: #050f05 !important;
+    background-color: #071707 !important;
 }
 
 #write tr:hover td {
@@ -336,7 +361,7 @@ th .md-cursor {
     min-width: 2px !important;
     border-left: 2px solid #00ff41 !important;
     background-color: #00ff41 !important;
-    box-shadow: 0 0 5px rgba(0, 255, 65, 0.85) !important;
+    box-shadow: 0 0 3px rgba(0, 255, 65, 0.6) !important;
     animation: amatriz-blink 1.2s infinite;
 }
 
@@ -347,7 +372,7 @@ th .md-cursor {
 #typora-sidebar {
     background: var(--side-bg);
     border-right: 1px solid var(--border-color);
-    min-width: 300px;
+    min-width: 240px;
 }
 
 .sidebar-tabs {
@@ -753,9 +778,9 @@ header {
         padding-top: 0.18em !important;
         line-height: 1.25 !important;
         overflow: visible !important;
-        break-after: avoid-page;
+        break-after: avoid;
         page-break-after: avoid;
-        break-inside: avoid-page;
+        break-inside: avoid;
         page-break-inside: avoid;
     }
 
@@ -881,7 +906,7 @@ header {
     }
 
     th {
-        background: var(--code-bg) !important;
+        background: #082208 !important;
         color: var(--text-color) !important;
         padding: 4px 6px !important;
         vertical-align: top !important;
@@ -900,8 +925,8 @@ header {
     }
 
     #write tr:nth-child(even) td {
-        background: #050f05 !important;
-        background-color: #050f05 !important;
+        background: #071707 !important;
+        background-color: #071707 !important;
     }
 
     #write table.periodic-mini {
@@ -972,15 +997,19 @@ header {
     }
 
     /* avoid ugly splits */
-    pre, pre.md-fences, blockquote, img,
-    .md-toc, .md-fences, .md-diagram-panel {
-        break-inside: avoid-page;
+    blockquote, img, .md-toc, .md-diagram-panel {
+        break-inside: avoid;
         page-break-inside: avoid;
     }
 
-    table {
+    pre, pre.md-fences, .md-fences {
         break-inside: auto !important;
         page-break-inside: auto !important;
+    }
+
+    table {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
     }
 
     thead {
@@ -1002,6 +1031,22 @@ header {
     li {
         orphans: 3;
         widows: 3;
+    }
+
+    pre {
+        orphans: 3 !important;
+        widows: 3 !important;
+        line-height: 1.5 !important;
+        padding-bottom: 6px !important;
+    }
+
+    h2 + pre,
+    h3 + pre {
+        break-before: avoid !important;
+    }
+
+    pre + pre {
+        border-top: 0 !important;
     }
 
     ul,

@@ -1,5 +1,5 @@
-﻿/* =========================================================
-   AMATRIZ PRINT WHITE THEME - v1.0.0
+/* =========================================================
+   AMATRIZ PRINT WHITE THEME - v1.0.1
    SPDX-License-Identifier: MIT
    Copyright (c) 2026 Electritects Pty Ltd
    Clean Matrix-inspired engineering theme
@@ -68,7 +68,7 @@ html, body {
 
 #write {
     width: calc(100% - 80px);
-    max-width: 1280px;
+    max-width: 980px;
     min-width: 0;
     margin-left: 40px;
     margin-right: auto;
@@ -91,18 +91,16 @@ html, body {
 }
 
 /* subtle scanline texture */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: linear-gradient(rgba(0,255,65,0.020) 1px, transparent 1px);
-    background-size: 100% 4px;
-    pointer-events: none;
+@media screen {
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: linear-gradient(rgba(0,255,65,0.020) 1px, transparent 1px);
+        background-size: 100% 4px;
+        pointer-events: none;
+    }
 }
-
-/* =========================
-   HEADINGS
-========================= */
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-color);
@@ -223,6 +221,8 @@ pre.md-fences {
     overflow-x: auto;
     white-space: pre-wrap;
     word-break: break-word;
+    break-inside: auto;
+    page-break-inside: auto;
 }
 
 pre code,
@@ -698,8 +698,6 @@ header {
    the dark editor experience.
 ========================================================= */
 
-html,
-body,
 .typora-export,
 .typora-export-content {
     background: #ffffff !important;
@@ -708,16 +706,9 @@ body,
 }
 
 @media screen {
-    html:has(body:not(.typora-export):not(.typora-print)) {
-        background: var(--bg-color) !important;
-        background-color: var(--bg-color) !important;
-        color: var(--text-color) !important;
-    }
-
-    body:not(.typora-export):not(.typora-print) {
-        background: var(--bg-color) !important;
-        background-color: var(--bg-color) !important;
-        color: var(--text-color) !important;
+    html, body {
+        background: var(--bg-color);
+        color: var(--text-color);
     }
 }
 
@@ -817,6 +808,7 @@ body,
         padding: 0 !important;
         box-sizing: border-box !important;
         overflow: visible !important;
+        font-family: "Times New Roman", "Georgia", serif !important;
     }
 
     .typora-export #write,
@@ -888,9 +880,9 @@ body,
         padding-top: 0.18em !important;
         line-height: 1.25 !important;
         overflow: visible !important;
-        break-after: avoid-page;
+        break-after: avoid;
         page-break-after: avoid;
-        break-inside: avoid-page;
+        break-inside: avoid;
         page-break-inside: avoid;
     }
 
@@ -945,8 +937,8 @@ body,
 
     blockquote {
         background: transparent !important;
-        color: #000000 !important;
-        border-left-color: #555555 !important;
+        color: #333333 !important;
+        border-left: 3px solid #999999 !important;
     }
 
     pre.md-meta-block,
@@ -959,16 +951,16 @@ body,
     }
 
     code {
-        background: #f2f2f2 !important;
+        background: #f5f5f5 !important;
         color: #000000 !important;
-        border: 1px solid #bfbfbf !important;
+        border: 1px solid #cccccc !important;
     }
 
     pre,
     pre.md-fences {
-        background: #f7f7f7 !important;
+        background: #f8f8f8 !important;
         color: #000000 !important;
-        border: 1px solid #bfbfbf !important;
+        border: 1px solid #cccccc !important;
         white-space: pre-wrap !important;
         word-break: break-word !important;
         line-height: 1.25 !important;
@@ -995,7 +987,9 @@ body,
     table,
     th,
     td {
-        border: 1px solid #808080 !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: 1px solid #cccccc !important;
         line-height: 1.25 !important;
         overflow: visible !important;
         overflow-wrap: anywhere !important;
@@ -1003,7 +997,7 @@ body,
     }
 
     table {
-        border: 1px solid #808080 !important;
+        border: 1px solid #cccccc !important;
         border-collapse: collapse !important;
         table-layout: fixed !important;
         width: 100% !important;
@@ -1021,8 +1015,8 @@ body,
     }
 
     th {
-        background: #eeeeee !important;
-        color: #000000 !important;
+        background: #f2f2f2 !important;
+        font-weight: 600 !important;
         padding: 4px 6px !important;
         vertical-align: top !important;
     }
@@ -1033,8 +1027,6 @@ body,
     }
 
     td {
-        background: #ffffff !important;
-        color: #000000 !important;
         padding: 3px 6px !important;
         vertical-align: top !important;
     }
@@ -1109,20 +1101,24 @@ body,
         background: #808080 !important;
     }
 
-    pre,
-    pre.md-fences,
     blockquote,
     img,
     .md-toc,
-    .md-fences,
     .md-diagram-panel {
-        break-inside: avoid-page;
-        page-break-inside: avoid;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    pre,
+    pre.md-fences,
+    .md-fences {
+        break-inside: auto !important;
+        page-break-inside: auto !important;
     }
 
     table {
-        break-inside: auto !important;
-        page-break-inside: auto !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
     }
 
     thead {
@@ -1144,6 +1140,22 @@ body,
     li {
         orphans: 3;
         widows: 3;
+    }
+
+    pre {
+        orphans: 3 !important;
+        widows: 3 !important;
+        line-height: 1.5 !important;
+        padding-bottom: 6px !important;
+    }
+
+    h2 + pre,
+    h3 + pre {
+        break-before: avoid !important;
+    }
+
+    pre + pre {
+        border-top: 0 !important;
     }
 
     ul,
