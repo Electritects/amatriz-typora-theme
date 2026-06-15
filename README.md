@@ -115,14 +115,18 @@ The [coding/](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/cod
 
 ## Validation Files
 
-- [docs/Typora Test File v1.0.0.md](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.0.md) → Full validation dossier & baseline
+- [docs/Typora Test File v1.0.1.md](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.1.md) → Full validation dossier
+- [docs/Typora Test File v1.0.0.md](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.0.md) → Original baseline
+- [docs/Sample Showcase.md](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Sample%20Showcase.md) → Clean demo version
 - [docs/specs/AMatriz Specifications v1.0.1.md](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/specs/AMatriz%20Specifications%20v1.0.1.md) → Detailed technical specification
 - [docs/assets/](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/assets/) → Documentation banner and assets
 - [artwork/](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/artwork/) → Gallery-ready artwork assets
 
 Validation PDFs:
-- [docs/Typora Test File v1.0.0 - PDF using Amatriz v1.0.1.pdf](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.0%20-%20PDF%20using%20Amatriz%20v1.0.1.pdf) → Dark export (v1.0.1)  
-- [docs/Typora Test File v1.0.0 - PDF using Amatriz white print v1.0.1.pdf](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.0%20-%20PDF%20using%20Amatriz%20white%20print%20v1.0.1.pdf) → Print-white export (v1.0.1)  
+- [docs/Typora Test File v1.0.1 - PDF using Amatriz v1.0.1.pdf](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.1%20-%20PDF%20using%20Amatriz%20v1.0.1.pdf) → Dark export (v1.0.1)  
+- [docs/Typora Test File v1.0.1 - PDF using Amatriz white print v1.0.1.pdf](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.1%20-%20PDF%20using%20Amatriz%20white%20print%20v1.0.1.pdf) → Print-white export (v1.0.1)  
+- [docs/Typora Test File v1.0.0 - PDF using Amatriz v1.0.1.pdf](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.0%20-%20PDF%20using%20Amatriz%20v1.0.1.pdf) → Baseline dark export (v1.0.1)  
+- [docs/Typora Test File v1.0.0 - PDF using Amatriz white print v1.0.1.pdf](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.0%20-%20PDF%20using%20Amatriz%20white%20print%20v1.0.1.pdf) → Baseline print-white export (v1.0.1)  
 
 These demonstrate:
 - pagination stability  
@@ -134,7 +138,7 @@ These demonstrate:
 
 ## Recommended Test Flow
 
-1. Open the validation dossier ([docs/Typora Test File v1.0.0.md](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.0.md)) in Typora
+1. Open the validation dossier ([docs/Typora Test File v1.0.1.md](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/docs/Typora%20Test%20File%20v1.0.1.md)) in Typora
 2. Select **AMatriz Print White**
 3. Export to PDF
 
