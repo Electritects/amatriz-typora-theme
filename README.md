@@ -11,8 +11,8 @@ It is a **deterministic document rendering system** built to ensure reliable, cl
 
 ## Current Version
 
-- **Version**: `v1.0.1`
-- **Status**: Complete, stable, and ready for Typora Theme Gallery submission
+- **Version**: `v1.0.1` (Final Release)
+- **Status**: 100% Complete — Merged live on official [Typora Theme Gallery](https://theme.typora.io/theme/amatriz/) ([PR #535](https://github.com/typora/theme.typora.io/pull/535))
 
 ### Packaged Theme Files
 - [coding/amatriz.css](file:///c:/Users/eacca/Dropbox/Coding/Amatriz%20Typora%20Theme/coding/amatriz.css)
@@ -245,9 +245,11 @@ Not to documents created using the theme.
 
 ## Final Note
 
-AMatriz is built to ensure:
+AMatriz `v1.0.1` represents the final, complete update of the AMatriz Typora Theme system.
 
+It ensures:
 → Documents **render correctly without manual intervention**  
-→ Output is **consistent, predictable, and publishable**
+→ Output is **consistent, predictable, and publishable**  
+→ Theme files are **merged live on the official Typora Theme Gallery**
 
-This shifts Typora from a styling tool to a **document system**.
+This project is 100% complete and prepared for final backup.
