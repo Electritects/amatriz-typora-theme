@@ -7,8 +7,6 @@ sandbox/
 # Artwork assets
 artwork/
 
-# AI Tools and review documents
-ai_tools/
 aitools/
 
 # Specifications (internal, not for GitHub)
