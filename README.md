@@ -196,6 +196,17 @@ Not to documents created using the theme.
 
 ---
 
+## Features
+
+- Core functional capabilities and tools for Amatriz Typora Theme.
+- Modular architecture designed for extensibility and performance.
+
+## Specifications
+
+Authoritative technical specifications and architectural requirements are maintained at [`docs/specs/AMatriz Specifications v1.0.1.md`](./docs/specs/AMatriz%20Specifications%20v1.0.1.md).
+
+---
+
 ## Changelog
 
 ### v1.0.1
